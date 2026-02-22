@@ -71,28 +71,41 @@
   position: relative;
   top: 6px;
   left: 6px;
-  border: 6px solid {{"#36454F"}};
-  width: 1012px;
-  height:612px;
+  border: 6px solid blue;
+  width: 1000px;
+  height:600px;
   }
 .as1 {
   position: relative;
-  top: 60px;
+  top: 90px;
   left: 250px;
-  border: 6px solid {{"#E30B5C"}};
-  width: 1036px;
-  height:638px;
+  border: 6px solid #4CAF50; 
+  width: 1024px;
+  height:624px;
   }
 
 </style>
 <body>
 
-
-
-
  <div class="as1">
   <div class="as"><canvas id="game" width="1000" height="600" ></canvas> </div>
   </div>
+  <div>
+      <div style="position: fixed; border: 6px solid blue; border-radius: 10px ; left: 260px; top:10px; width: 355px; height: 40px; padding: 4px; background-color: #cae8ca;">
+      <button style="position: fixed; border: 2px solid #4CAF50; " onclick="displayDate()">The first player 'YOU' ! Play with mouse</button><h4 style="position: fixed;" id="demo1" onclick="changeText(this)"></h4>
+      </div>
+
+      <div style="position: fixed; border: 6px solid rgb(187, 187, 211); border-radius: 10px ; left: 715px; top:20px; width: 110px; height: 20px; padding: 4px; background-color: #cae8ca;">
+      <button style="position: fixed; border: 2px solid #4CAF50; " onclick="displayDate()">BOARD GAME</button><h4 style="position: fixed;" id="demo2" onclick="changeText(this)"></h4>
+      </div> 
+
+      <div style="position: fixed; border: 6px solid blue; border-radius: 10px ; left: 915px; top:10px; width: 355px; height: 40px; padding: 4px; background-color: #cae8ca;">
+      <button style="position: fixed; border: 2px solid #4CAF50; " onclick="displayDate()">The computer player !</button><h4 style="position: fixed;" id="demo2" onclick="changeText(this)"></h4>
+      </div> 
+      
+      <script>
+      function displayDate() {document.getElementById("demo1").innerHTML = Date();}
+      </script>
 
 
   <div>
