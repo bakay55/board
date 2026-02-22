@@ -117,7 +117,62 @@
       </script>
 
 
+<div style="
+  position: fixed;
+  left: 1050px;
+  top: 760px;
+  width: 210px;
+  height: 80px;
+  border: 6px solid blue;
+  border-radius: 10px;
+  background-color: #cae8ca;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+">
 
+  <button onclick="startClock()" style="
+    border: 2px solid #4CAF50;
+    font-size: 14px;
+    margin-bottom: 4px;
+    cursor: pointer;
+  ">SAATİ BAŞLAT</button>
+
+  <div id="clock" style="
+    font-family: Consolas, monospace;
+    font-size: 28px;
+    font-weight: bold;
+    color: #0033cc;
+    letter-spacing: 2px;
+  ">
+    00:00:00
+  </div>
+
+</div>
+
+<script>
+let clockRunning = false;
+
+function startClock() {
+  if (clockRunning) return;
+  clockRunning = true;
+
+  function updateClock() {
+    const now = new Date();
+
+    let h = now.getHours().toString().padStart(2,'0');
+    let m = now.getMinutes().toString().padStart(2,'0');
+    let s = now.getSeconds().toString().padStart(2,'0');
+
+    document.getElementById("clock").innerHTML = `${h}:${m}:${s}`;
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+}
+</script>
 
 
 
