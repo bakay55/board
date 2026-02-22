@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript İle oyunBoard</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<head>
+
+ <style>
+/* AnaSayfa dönüş ve Google link butonları sm button styles  */
+.twitter-btn {
+  position: fixed;
+  margin: auto;
+  bottom: 0;
+  background-color: #0072b1;
+  border: 0.35em solid #1da1f2;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 0% 100% 0% 0%/0% 100% 0% 93%;
+  height: 85px;
+  width: 85px;
+  cursor: pointer;
+}
+.in-btn {
+  position: fixed;
+  margin: auto;
+  bottom: 0;
+  background-color: #0072b1;
+  border: 0.35em solid #1da1f2;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 100% 0% 0% 0%/100% 0% 0% 0%;
+  height: 85px;
+  width: 85px;
+  cursor: pointer;
+  right: 0;
+}
+.twitter-btn:hover {
+  background-color: #FFBF00;
+}
+.in-btn:hover {
+  background-color: #FFBF00;
+}
+.fa-twitter {
+  position: center;
+  left: 0em;
+  right: 0.4em;
+  top: 0.5em;
+  bottom: 0;
+  color: #FF3131;
+  font-size: 1.4em;
+}
+.fa-linkedin-in {
+  position: center;
+  left: 0.4em;
+  right: 0em;
+  top: 0.55em;
+  bottom: 0;
+  color: #FF3131;
+  font-size: 1.4em;
+}
+
+ </style>
+
+<style>
+.as {
+  position: relative;
+  top: 6px;
+  left: 6px;
+  border: 6px solid {{"#36454F"}};
+  width: 1012px;
+  height:612px;
+  }
+.as1 {
+  position: relative;
+  top: 60px;
+  left: 250px;
+  border: 6px solid {{"#E30B5C"}};
+  width: 1036px;
+  height:638px;
+  }
+
+</style>
+<body>
+
+
+
+
+ <div class="as1">
+  <div class="as"><canvas id="game" width="1000" height="600" ></canvas> </div>
+  </div>
+
+
+  <div>
+        <a href="https://bakay55.github.io/action/"><button class="twitter-btn" type="submit"><i class="fab fa-twitter">Ana Sayfa</i></button></a>
+        <a href="http://google.com"><button class="in-btn" type="submit"><i class="fab fa-linkedin-in">Google</i></button></a>
+  </div>
+
+ <script src="game.js" charset="utf-8"></script>
+</body>
+</html>
+
