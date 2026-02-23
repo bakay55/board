@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>JavaScript İle oyunBoard</title>
@@ -174,10 +174,94 @@ function startClock() {
 }
 </script>
 
+***************************
+<div style="
+  position: fixed;
+  left: 200px;
+  top: 760px;
+  width: 355px;
+  height: 100px;
+  border: 6px solid red;
+  border-radius: 10px;
+  background-color: #000;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+">
 
+  <button onclick="startClockLED()" style="
+    border: 2px solid #00ff00;
+    background-color: black;
+    color: #00ff00;
+    font-size: 13px;
+    margin-bottom: 5px;
+    cursor: pointer;
+  ">LED SAATİ BAŞLAT</button>
 
+  <div id="clockLED" style="
+    font-family: Consolas, monospace;
+    font-size: 28px;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow:
+      0 0 5px #00ff00,
+      0 0 10px #00ff00,
+      0 0 20px #00ff00;
+  ">
+    00:00:00
+  </div>
 
+  <div id="dateLED" style="
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    color: #00ff00;
+  ">
+    00.00.0000
+  </div>
 
+</div>
+
+<script>
+
+let clockRunningLED = false;
+let blinkLED = true;
+
+function startClockLED() {
+
+  if (clockRunningLED) return;
+  clockRunningLED = true;
+
+  function updateClockLED() {
+
+    const now = new Date();
+
+    let h = now.getHours().toString().padStart(2,'0');
+    let m = now.getMinutes().toString().padStart(2,'0');
+    let s = now.getSeconds().toString().padStart(2,'0');
+
+    let d = now.getDate().toString().padStart(2,'0');
+    let mo = (now.getMonth()+1).toString().padStart(2,'0');
+    let y = now.getFullYear();
+
+    let colon = blinkLED ? ":" : " ";
+    blinkLED = !blinkLED;
+
+    document.getElementById("clockLED").innerHTML =
+      h + colon + m + colon + s;
+
+    document.getElementById("dateLED").innerHTML =
+      d + "." + mo + "." + y;
+  }
+
+  updateClockLED();
+  setInterval(updateClockLED, 500);
+
+}
+
+</script>
+****************************
 
   <div>
         <a href="https://bakay55.github.io/action/"><button class="twitter-btn" type="submit"><i class="fab fa-twitter">Ana Sayfa</i></button></a>
@@ -187,4 +271,3 @@ function startClock() {
  <script src="game.js" charset="utf-8"></script>
 </body>
 </html>
-
